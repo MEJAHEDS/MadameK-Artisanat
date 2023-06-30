@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madame K Artisanat - Coming Soon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .coming-soon-container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background-color: #ff7f50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .coming-soon-container {
+                max-width: 90%;
+            }
+        }
+        .contact-form {
+            margin-top: 30px;
+        }
+
+        .form-input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-message {
+            height: 150px;
+        }
+
+        .form-submit {
+            background-color: #ff7f50;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-submit:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <div class="coming-soon-container">
+        <div class="logo">MK</div>
+        <div class="title">Madame K Artisanat</div>
+        <div class="description">
+            Shopping et vente au détail<br>
+            Les trésors cachés des souks marocains<br>
+            Décoration d’intérieur<br>
+            Art de la table 🍽️<br>
+            Boutique d’art et d’artisanat 🛍️<br>
+            Livraison 🌍
+        </div>
+        <div class="countdown">Coming Soon!</div>
+        <div id="timer"></div>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" class="form-input" placeholder="Nom" required>
+                <input type="email" name="email" class="form-input" placeholder="Adresse e-mail" required>
+                <textarea name="message" class="form-input form-message" placeholder="Votre message" required></textarea>
+                <button type="submit" class="form-submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+   
+
+    <script>
+        // Set the date we're counting down to (replace with your launch date)
+        var countDownDate = new Date("2023-07-01T00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function() {
+            // Get the current date and time
+            var now = new Date().getTime();
+
+            // Calculate the remaining time
+            var distance = countDownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "Launched!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
