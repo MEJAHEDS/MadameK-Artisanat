@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import "./ComingSoon.css";
 import logo from "./logo.jpeg";
 import Countdown from "react-countdown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const ComingSoon = () => {
   const [email, setEmail] = useState("");
@@ -33,12 +40,48 @@ const ComingSoon = () => {
   return (
     <div className="coming-soon">
       <img className="logo" src={logo} alt="logo" />
-      <p>
-        <span class="artisanat">Artisanat marocain</span>
-        <span class="artisanat">Trésors cachés</span>
-        <span class="artisanat">Décoration raffinée</span>
-        <span class="artisanat">Livraison mondiale</span>
-      </p>
+      <div>
+        <div className="icons-container">
+          <a
+            href="https://www.instagram.com/madamekartisanat/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faFacebook} className="icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/madamekartisanat/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/madamekartisanat/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faTwitter} className="icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/madamekartisanat/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="icon" />
+          </a>
+        </div>
+      </div>
+      {
+        <p>
+          <strong>Madame K </strong> est en train de préparer quelque chose de
+          très spécial pour vous. Restez à l'écoute !
+        </p>
+      }
+      <br />
+      <br />
+      <br />
+      <br />
 
       <div className="countdown-container">
         <Countdown date={countdownDate} renderer={renderer} />

@@ -18,7 +18,7 @@ body {
   width: 160px;
   height: auto;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   border: 8px solid #984f54; /* Border color for the logo */
   background-color: #f9f6f0; /* Background color inside the logo circle */
 }
@@ -60,15 +60,15 @@ h1 {
 p {
   font-size: 18px;
   display: flex;
-  flex-direction: row;
-  
+  align-items: center;
+  justify-content: center;
 }
 
 .countdown {
   font-size: 24px;
   font-weight: bold;
   margin: 20px 0;
-  background-color: #984f54; /* Background color for the countdown timer */
+  background-color: #e0c698; /* Background color for the countdown timer */
   padding: 10px 20px;
   border-radius: 5px;
   color: #f9f6f0; /* Text color for the countdown timer */
@@ -107,80 +107,14 @@ button[type="submit"]:hover {
 }
 
 
-.artisanat {
-  color: #700f10;
-  font-weight: bold;
+
+
+.icons-container {
+  display: flex;
+  gap: 10px;
 }
 
-.tresors {
-  color: #984f54;
-  font-style: italic;
-}
-
-.decoration {
-  color: #700f10;
-  text-decoration: underline;
-}
-
-.livraison {
-  color: #f9f6f0;
-  background-color: #700f10;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-
-.mondiale {
-  color: #984f54;
-  font-weight: bold;
-}
-
-
-.countdown {
+.icon {
   font-size: 24px;
-  font-weight: bold;
-  margin: 20px 0;
-  background-color: #984f54; /* Background color for the countdown timer */
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #f9f6f0; /* Text color for the countdown timer */
+  color: #700f10; /* You can adjust the color as needed */
 }
-
-.email-form {
-  margin-top: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  
-}
-
-input[type="email"] {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  margin-right: 10px;
-  width: 250px;
-}
-
-button[type="submit"] {
-  padding: 10px 20px;
-  background-color: #984f54; /* Background color for the submit button */
-  color: #f9f6f0; /* Text color for the submit button */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #700f10; /* Background color on hover for the submit button */
-}
-
-.artisanat {
-  margin: 30px;
-  color: #700f10;
-  font-weight: bold;
-}
-
-
