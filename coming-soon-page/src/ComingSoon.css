@@ -1,14 +1,186 @@
+/* ComingSoon.css */
+
+body {
+  background-color: rgb(249, 246, 240); /* Background color for the entire page */
+  font-family: Arial, sans-serif; /* Choose your preferred font-family */
+}
+
 .coming-soon {
-    text-align: center;
-    padding: 50px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+.logo {
+  width: 160px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 8px solid #984f54; /* Border color for the logo */
+  background-color: #f9f6f0; /* Background color inside the logo circle */
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* ComingSoon.css */
+
+body {
+  background-color: rgb(249, 246, 240); /* Background color for the entire page */
+  font-family: Arial, sans-serif; /* Choose your preferred font-family */
+}
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 8px solid #984f54; /* Border color for the logo */
+  background-color: #f9f6f0; /* Background color inside the logo circle */
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
   
-  h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
+}
+
+.countdown {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  background-color: #984f54; /* Background color for the countdown timer */
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #f9f6f0; /* Text color for the countdown timer */
+}
+
+.email-form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
   
-  p {
-    font-size: 18px;
-  }
+}
+
+input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 250px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #984f54; /* Background color for the submit button */
+  color: #f9f6f0; /* Text color for the submit button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #700f10; /* Background color on hover for the submit button */
+}
+
+
+.artisanat {
+  color: #700f10;
+  font-weight: bold;
+}
+
+.tresors {
+  color: #984f54;
+  font-style: italic;
+}
+
+.decoration {
+  color: #700f10;
+  text-decoration: underline;
+}
+
+.livraison {
+  color: #f9f6f0;
+  background-color: #700f10;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.mondiale {
+  color: #984f54;
+  font-weight: bold;
+}
+
+
+.countdown {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  background-color: #984f54; /* Background color for the countdown timer */
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #f9f6f0; /* Text color for the countdown timer */
+}
+
+.email-form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
   
+}
+
+input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 250px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #984f54; /* Background color for the submit button */
+  color: #f9f6f0; /* Text color for the submit button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #700f10; /* Background color on hover for the submit button */
+}
+
+.artisanat {
+  margin: 30px;
+  color: #700f10;
+  font-weight: bold;
+}
+
+
