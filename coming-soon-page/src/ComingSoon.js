@@ -40,6 +40,31 @@ const ComingSoon = () => {
   return (
     <div className="coming-soon">
       <img className="logo" src={logo} alt="logo" />
+
+      {<h1 className="coming">We Coming Soon !</h1>}
+
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div className="countdown-container">
+        <Countdown date={countdownDate} renderer={renderer} />
+      </div>
+      <div className="email-form">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit">Get Notified</button>
+        </form>
+      </div>
+      <br />
+      <br />
       <div>
         <div className="icons-container">
           <a
@@ -71,32 +96,6 @@ const ComingSoon = () => {
             <FontAwesomeIcon icon={faLinkedin} className="icon" />
           </a>
         </div>
-      </div>
-      {
-        <p>
-          <strong>Madame K </strong> est en train de préparer quelque chose de
-          très spécial pour vous. Restez à l'écoute !
-        </p>
-      }
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <div className="countdown-container">
-        <Countdown date={countdownDate} renderer={renderer} />
-      </div>
-      <div className="email-form">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={handleChange}
-            required
-          />
-          <button type="submit">Get Notified</button>
-        </form>
       </div>
     </div>
   );
