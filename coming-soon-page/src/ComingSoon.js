@@ -7,28 +7,50 @@ import {
   faFacebook,
   faInstagram,
   faTwitter,
-  faLinkedin,
+  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+import { db } from "./firebaseConfig";
+
+import { collection, addDoc } from "firebase/firestore";
 
 const ComingSoon = () => {
   const [email, setEmail] = useState("");
 
-  // Gestionnaire pour soumettre l'adresse e-mail
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Envoyer l'adresse e-mail quelque part (par exemple, à votre backend) ici
-    console.log("E-mail submitted:", email);
+    try {
+      const emailsCollection = collection(db, "emails");
+      // verifier que l'email est valide avant de l'ajouter à la collection "emails"
+      if (!email.includes("@")) {
+        alert("Please enter a valid email address");
+        return;
+      }
+
+      // Add the email to the "emails" collection
+      await addDoc(emailsCollection, { email });
+      console.log("E-mail submitted:", email);
+      //  Add a toast message to confirm the email was submitted
+      alert("Thank you for subscribing!");
+
+      // Clear the input field after the email is submitted
+      setEmail("");
+    } catch (error) {
+      console.error("Error adding email:", error);
+    }
   };
 
-  // Gestionnaire pour mettre à jour l'adresse e-mail lorsqu'elle est modifiée dans le formulaire
   const handleChange = (e) => {
     setEmail(e.target.value);
+    // verify that the email is valid
+    if (e.target.value.includes("@")) {
+      console.log("valid email");
+    } else {
+      console.log("invalid email");
+    }
   };
 
-  // Compte à rebours jusqu'à la date spécifiée (ici, 1er janvier 2024)
   const countdownDate = new Date("2023-11-01T00:00:00").getTime();
 
-  // Fonction pour formater le compte à rebours
   const renderer = ({ days, hours, minutes, seconds }) => {
     return (
       <span className="countdown">
@@ -41,7 +63,7 @@ const ComingSoon = () => {
     <div className="coming-soon">
       <img className="logo" src={logo} alt="logo" />
 
-      {<h1 className="coming">We Coming Soon !</h1>}
+      <h1 className="coming">We Are Coming Soon!</h1>
 
       <br />
       <br />
@@ -93,7 +115,7 @@ const ComingSoon = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="icon" />
+            <FontAwesomeIcon icon={faTiktok} className="icon" />
           </a>
         </div>
       </div>
