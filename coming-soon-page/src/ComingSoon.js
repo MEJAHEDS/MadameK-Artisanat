@@ -63,7 +63,7 @@ const ComingSoon = () => {
     <div className="coming-soon">
       <img className="logo" src={logo} alt="logo" />
 
-      <h1 className="coming">We Are Coming Soon!</h1>
+      <h1 className="coming">We're Coming Soon!</h1>
 
       <br />
       <br />
